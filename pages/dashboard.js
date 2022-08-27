@@ -36,6 +36,8 @@ export default function Dashboard() {
     securePage();
   }, []);
 
+
+  console.log("dahboard log",userInfo,"status",status)
   return (
     <>
       <Navbar />
