@@ -23,28 +23,21 @@ Eğer session
 */
 
 export default function Dashboard() {
-
-
-  const [loading,setLoading]=useState(false);
-
+  const [loading, setLoading] = useState(false);
 
   //Sadece comp. render edilirken bir kere çalışıyot componentDidMount()
-  
+
   useEffect(() => {
-    const securePage=async()=>{
-
-//GetSession bize ya session objesi yada null bir obje yolluyor.
-      const session=await getSession();
-      if(session){
-
-      }
-      else{
+    const securePage = async () => {
+      //GetSession bize ya session objesi yada null bir obje yolluyor.
+      const session = await getSession();
+      if (session) {
+      } else {
         signIn();
       }
-    }  
+    };
     securePage();
-  },[]);
-
+  }, []);
 
   return (
     <>
